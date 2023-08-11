@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  p{
+      padding-block: 2px;
+  }
+</style>
+<title>FizzBuzz</title>
+</head>
+<body>
+  <h1>FizzBuzz Program</h1>
+  <script>
+    let i = 1;
+    let loopLimit = prompt("Enter Loop Limit !");
+    setInterval(function() {
+      if(i <= loopLimit) {
+      let output = '';
+
+      if (i % 3 === 0) {
+        output += 'Fizz';
+      }
+      if (i % 5 === 0) {
+        output += 'Buzz';
+      }
+
+      if (output === '') {
+        output = i;
+      }i++
+
+      const para = document.createElement('p');
+      para.textContent = output;
+      document.body.appendChild(para);
+    }
+    }, 100)
+  </script>
+</body>
+</html>
